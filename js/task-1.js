@@ -1,12 +1,9 @@
-function makeTransaction(quantity, pricePerDroid) {
-  const result = `"You ordered ${quantity} droids worth ${pricePerDroid} credits!"`;
-
-  return result;
+function slugify(title) {
+  const slug = title.toLowerCase();
+  return slug.replace(/ /g, "-");
 }
-makeTransaction(5, 3000);
-makeTransaction(3, 1000);
-makeTransaction(10, 500);
 
-console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
-console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
-console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
+console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
+console.log(slugify("English for developer")); // "english-for-developer"
+console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
